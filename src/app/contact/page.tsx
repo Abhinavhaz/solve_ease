@@ -69,8 +69,8 @@ export default function ContactPage() {
       answer: 'Yes, all workers go through our verification process including background checks and skill assessments.'
     },
     {
-      question: 'What if I\'m not satisfied with the service?',
-      answer: 'We offer a satisfaction guarantee. Contact our support team and we\'ll work to resolve any issues.'
+      question: 'What if I&apos;m not satisfied with the service?',
+      answer: 'We offer a satisfaction guarantee. Contact our support team and we&apos;ll work to resolve any issues.'
     },
     {
       question: 'How does pricing work?',
@@ -84,7 +84,7 @@ export default function ContactPage() {
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Have questions or need help? We're here to assist you. Reach out to us through any of the channels below.
+          Have questions or need help? We&apos;re here to assist you. Reach out to us through any of the channels below.
         </p>
       </div>
 
@@ -98,7 +98,7 @@ export default function ContactPage() {
               <div className="text-center py-8">
                 <div className="text-6xl mb-4">✅</div>
                 <h3 className="text-xl font-semibold text-green-600 mb-2">Message Sent!</h3>
-                <p className="text-gray-600 mb-4">Thank you for contacting us. We'll get back to you within 24 hours.</p>
+                <p className="text-gray-600 mb-4">Thank you for contacting us. We&apos;ll get back to you within 24 hours.</p>
                 <button
                   onClick={() => setIsSubmitted(false)}
                   className="text-blue-600 hover:text-blue-700 font-medium"

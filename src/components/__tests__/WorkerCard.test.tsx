@@ -10,8 +10,8 @@ jest.mock('@/utils/animations', () => ({
 
 // Mock Next.js Image component
 jest.mock('next/image', () => {
-  return function MockImage({ src, alt, ...props }: any) {
-    return <img src={src} alt={alt} {...props} />
+  return function MockImage({ src, alt, ...props }: Record<string, unknown>) {
+    return <img src={src as string} alt={alt as string} {...props} />
   }
 })
 

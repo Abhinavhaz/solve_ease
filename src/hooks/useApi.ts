@@ -12,7 +12,7 @@ interface UseApiOptions {
 }
 
 // Simple in-memory cache
-const cache = new Map<string, { data: any; timestamp: number }>()
+const cache = new Map<string, { data: unknown; timestamp: number }>()
 
 export function useApi<T>(
   url: string,
@@ -32,7 +32,7 @@ export function useApi<T>(
     const cached = cache.get(url)
     if (cached && Date.now() - cached.timestamp < cacheTime) {
       setState({
-        data: cached.data,
+        data: cached.data as T,
         loading: false,
         error: null
       })
@@ -67,7 +67,7 @@ export function useApi<T>(
         })
         
         setState({
-          data: result,
+          data: result as T,
           loading: false,
           error: null
         })
@@ -78,12 +78,12 @@ export function useApi<T>(
           error: result.error || 'API request failed'
         })
       }
-    } catch (error: any) {
-      if (error.name !== 'AbortError') {
+    } catch (error: unknown) {
+      if ((error as Error).name !== 'AbortError') {
         setState({
           data: null,
           loading: false,
-          error: error.message || 'Network error'
+          error: (error as Error).message || 'Network error'
         })
       }
     }

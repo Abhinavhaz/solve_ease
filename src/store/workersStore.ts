@@ -23,14 +23,14 @@ interface WorkersState {
   setLoading: (loading: boolean) => void
   setError: (error: string | null) => void
   setCurrentPage: (page: number) => void
-  setPagination: (pagination: any) => void
+  setPagination: (pagination: { currentPage: number; totalPages: number; totalWorkers: number; workersPerPage: number }) => void
   setSelectedService: (service: string) => void
   setPriceRange: (range: { min: number; max: number }) => void
   setSearchQuery: (query: string) => void
   resetFilters: () => void
 }
 
-export const useWorkersStore = create<WorkersState>((set, get) => ({
+export const useWorkersStore = create<WorkersState>((set) => ({
   workers: [],
   filteredWorkers: [],
   loading: false,

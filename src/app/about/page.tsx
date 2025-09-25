@@ -47,7 +47,7 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Mission</h2>
             <p className="text-gray-600 mb-4">
               To revolutionize how people find and hire skilled workers by creating a platform that prioritizes 
-              quality, reliability, and transparency. We're building a community where both service providers 
+              quality, reliability, and transparency. We&apos;re building a community where both service providers
               and customers can thrive.
             </p>
             <p className="text-gray-600">

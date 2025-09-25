@@ -94,7 +94,7 @@ export default function ServicesPage() {
       <div className="bg-blue-600 rounded-xl text-white p-8 text-center">
         <h2 className="text-2xl font-bold mb-4">Need a Custom Service?</h2>
         <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-          Can't find what you're looking for? Contact us and we'll help you find the right professional for your specific needs.
+          Can&apos;t find what you&apos;re looking for? Contact us and we&apos;ll help you find the right professional for your specific needs.
         </p>
         <Link
           href="/contact"
