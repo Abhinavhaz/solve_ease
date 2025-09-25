@@ -2,7 +2,7 @@
 
 import { memo, useRef, useEffect } from 'react'
 import { WorkerType } from '@/types/workers'
-import OptimizedImage from './OptimizedImage'
+import FallbackImage from './FallbackImage'
 import { animateCardEntrance } from '@/utils/animations'
 
 interface WorkerCardProps {
@@ -29,11 +29,12 @@ const WorkerCard = memo(({ worker, priority = false, animationDelay = 0 }: Worke
       aria-labelledby={`worker-name-${worker.id}`}
       aria-describedby={`worker-details-${worker.id}`}
     >
-      <OptimizedImage
+      <FallbackImage
         src={worker.image}
         alt={`${worker.name} - ${worker.service}`}
         priority={priority}
         className="w-full h-48 group-hover:scale-105 transition-transform duration-300"
+        fallbackSrc="/placeholder-worker.svg"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
       
